@@ -1,12 +1,7 @@
 body{
     font-family: sans-serif;
 }
-.headerImage{
-    height: 60px;
-    width: 80px;
-    
-    
-}
+
 nav li:last-child a{
     background-color: white;
 
@@ -35,4 +30,17 @@ section.hero{
     background-color: orange;
     color: white;
     border-color:wheat;
+}
+.btn{
+    background-color: red;
+}
+.btn:hover{
+    background-color: rgb(190, 9, 9);
+    transition: all .3s ease-in-out;
+}
+section.cart{
+    background-color: rgb(238, 236, 236);
+}
+.amount{
+    color:red;
 }

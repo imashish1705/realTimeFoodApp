@@ -10,3 +10,18 @@ set up js and scss
 6 install tailwind css
 set cdn link into home.ejs
 google font lato search then put into header section
+
+7 create home page
+8 create cart page
+
+hume nav bar footer sabhi page mei chaiye hota hai toh
+code baar baar repeat na ho ishlie hum usko ek jagah likh dehete hai 
+ek file mei footer and navbar ka code likh doh 
+
+jagah ka name hai views folder mei ek layout.ejs k name ka folder banaa doh 
+views>layout.ejs ..
+
+aisa hum ishliye krte hai kuki jo hume express-ejs-layout na ka package install kra hai ishke wajahseh express bhai sab layout fole ko search krta hai 
+jaise views k case mei hota hai
+
+express-ejs-layout ki wajahseh seh hum reuse hone walo ko use kr sakte hai 
