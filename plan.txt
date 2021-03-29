@@ -1,0 +1,12 @@
+1 create file structure
+2  install dependencies
+express
+ejs
+express-ejs-layouts
+3 git 
+4 laravel mix install
+5  create webpack.mix.js see in laravel.mix website
+set up js and scss
+6 install tailwind css
+set cdn link into home.ejs
+google font lato search then put into header section

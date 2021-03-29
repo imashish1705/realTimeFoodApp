@@ -1,0 +1,38 @@
+body{
+    font-family: sans-serif;
+}
+.headerImage{
+    height: 60px;
+    width: 80px;
+    
+    
+}
+nav li:last-child a{
+    background-color: white;
+
+}
+nav li:last-child a:hover{
+    background-color:gray;
+    transition: 2ms;
+}
+nav li a:hover{
+    color:brown;
+    transition: 2ms;
+}
+nav li a{
+    transition: all .3s ease-in-out;
+}
+section.hero{
+    background-color: #9ddfd3;
+}
+.size{
+    background-color: lightgrey;
+}
+.add-to-cart{
+    border: 2px solid orange;
+}
+.add-to-cart:hover{
+    background-color: orange;
+    color: white;
+    border-color:wheat;
+}
