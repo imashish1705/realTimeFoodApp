@@ -26,6 +26,9 @@ section.hero{
 .add-to-cart{
     border: 2px solid orange;
 }
+.add-to-cart:focus{
+    outline: none;
+}
 .add-to-cart:hover{
     background-color: orange;
     color: white;

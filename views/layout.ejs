@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script type="module" src="main.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
     <title>Food App</title>
@@ -21,11 +22,14 @@
                 <li class="ml-6 "><a href="/register">Register</a></li>
                 <li class="ml-6 "><a href="/login">Login</a></li>
                 <li class="ml-6 "><a href="#">offer</a></li>
-                <li class="ml-6 "><a href="#"><img src="/img/cart.png" class="w-24 inline-block px-4 py-2 rounded-full" alt=" class="ml-6""/></a></li>
+                <li class="ml-6 "><a href="/cart" class="inline-block flex items-center px-4 py-2 rounded-full" >
+                    <span id="cartCounter" class="text-black font-bold pr-2"><%= session.cart ? session.cart.totalQty : ''%></span>
+                    <img src="/img/cart.png" class="w-12" alt="" />
+                </a></li>
             </ul>
         </div>
     </nav>
     <%-body%>
-    <script src="app.js"></script>
+    <script src="/js/app.js"></script>
 </body>
 </html> 

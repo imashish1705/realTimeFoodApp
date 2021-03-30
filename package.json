@@ -4,19 +4,28 @@
   "description": "This is real-time food app",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js",
-    "dev": "nodemon server.js",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "start": "nodemon server.js",
+    "dev": "npm run development",
+    "development": "npx mix",
+    "watch": "npx mix watch",
+    "prod": "npm run production",
+    "production": "npx mix -p"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
     "laravel": "0.0.1",
+    "mongoose": "^5.12.2",
+    "noty": "^3.2.0-beta-deprecated",
     "render": "^0.1.4",
     "webpack": "^5.28.0"
   },

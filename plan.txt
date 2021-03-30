@@ -25,3 +25,20 @@ aisa hum ishliye krte hai kuki jo hume express-ejs-layout na ka package install 
 jaise views k case mei hota hai
 
 express-ejs-layout ki wajahseh seh hum reuse hone walo ko use kr sakte hai 
+
+9 sareh routes ko ek file mei rkhna doh
+file ka name routes hai
+
+10 : we create or follow factory pattern/function.... to more detail go homeController.js file
+11 : create dedicated controllers
+12. add to cart functionality
+14 : mongodb compass 
+create menus.json file and import it into mongodb compass 
+15. fetch all pizzas from db ans show on home page
+16. create menu model and put dummy data
+connect to mongo db
+use connect -mongo for session store
+-dependencies
+mongoose express-seesion, connect-mongo, dotenv
+-axios to send ajax request
+- install notification library npm i noty 

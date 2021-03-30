@@ -1,0 +1,51 @@
+[
+    {
+        "name" : "vegies pizza",
+        "image": "pizza.png",
+        "price": "600",
+        "size": "large"
+    },{
+        
+            "name" : "Farm house",
+            "image": "pizza.png",
+            "price": "500",
+            "size": "small"
+        },
+        {
+            "name" : "delux veggies",
+            "image": "pizza.png",
+            "price": "300",
+            "size": "meduim"
+        },
+        {
+            "name" : "country special",
+            "image": "pizza.png",
+            "price": "400",
+            "size": "small"
+        },
+        {
+            "name" : "gourmet",
+            "image": "pizza.png",
+            "price": "700",
+            "size": "large"
+        },
+        {
+            "name" :"5 pepper",
+            "image": "pizza.png",
+            "price": "600",
+            "size": "medium"
+        },
+        {
+            "name" : "fresh veggie",
+            "image": "pizza.png",
+            "price": "300",
+            "size": "medium"
+        },
+        {
+            "name" : "Cheese & Tomato",
+            "image": "pizza.png",
+            "price": "600",
+            "size": "large"
+        }
+
+]
