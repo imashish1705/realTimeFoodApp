@@ -19,8 +19,16 @@
         <div>
             <ul class="flex item-center">
                 <li class="ml-6 "><a href="/">Home</a></li>
+                <%if(user) { %>
+                <li class="ml-6 ">
+                    <form action="/logout" id="logout" method="POST">
+                    <a href="#" onclick="document.getElementById('logout').submit()">Logout</a>
+                </form>
+                </li>
+                <% } else { %>
                 <li class="ml-6 "><a href="/register">Register</a></li>
                 <li class="ml-6 "><a href="/login">Login</a></li>
+                <% } %>
                 <li class="ml-6 "><a href="#">offer</a></li>
                 <li class="ml-6 "><a href="/cart" class="inline-block flex items-center px-4 py-2 rounded-full" >
                     <span id="cartCounter" class="text-black font-bold pr-2"><%= session.cart ? session.cart.totalQty : ''%></span>

@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 package-lock.json
 D:\RealTimeWebApp_Nodejs_ejs_mongodb\package-lock.json
+.env

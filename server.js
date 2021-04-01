@@ -5,17 +5,12 @@ const path = require("path");
 const app = express(); //app
 const ejs = require("ejs"); // ejs
 const expresslayout = require("express-ejs-layouts");// layout 
-
+const passport = require("passport");
 var cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
 const session = require("express-session");
 const flash = require("express-flash"); //for cookie
 const MongoDbStore = require("connect-mongo")(session);
-
-// session store
-
-
-
 
 const PORT = process.env.PORT || 3300;
 
@@ -31,14 +26,12 @@ connection.once("open",() => {
     
 });
 
-
 //session store
 let mongoStore = new MongoDbStore({
     mongooseConnection: connection,
     collection: "sessions"
     
 });
-
 
 // session config  ...session ko kaam krne k liye cookie chaiye hoti hai
 // express ka koi bhi middleware use krana hai toh
@@ -52,28 +45,31 @@ app.use(session({
     //cookie: {maxAge: 100*6} //15 sec
 }));
 
+// global middleware //yeh ek normal function hota hai 
+app.use((req, res, next) => { // next yeh sab ek call back hai agr isko yeh mila toh access kr dehga
+    res.locals.session = req.session;
+    res.locals.user = req.user
+    next()// yeh yaha call nahi karenge toh yeh yaha atak jayeegi
+})
+
+
+// passport congif
+const passportInit = require("./app/config/passport");
+passportInit(passport);
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(flash());
 // set assets 
 app.use("/", express.static(path.join(__dirname, "/public")));
-
+app.use(express.urlencoded({extended : false}));
 app.use(express.json());
-
-// global middleware //yeh ek normal function hota hai 
-app.use((req, res, next) => { // next yeh sab ek call back hai agr isko yeh mila toh access kr dehga
-    res.locals.session = req.session;
-    next()// yeh yaha call nahi karenge toh yeh yaha atak jayeegi
-})
-
 // set templating 
 app.use(expresslayout);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname,"/views"));
- 
+
 require("./routes/web")(app) // koi bhi object agr hum pass krte hai function k andr toh humhe mil jata hai by refrence in javaScript
-
-
-
 
 app.listen(PORT, () => {
     console.log(`server running at ${PORT}`);
