@@ -26,11 +26,13 @@
     "express-flash": "0.0.2",
     "express-session": "^1.17.1",
     "laravel": "0.0.1",
+    "moment": "^2.29.1",
     "mongoose": "^5.12.2",
     "noty": "^3.2.0-beta-deprecated",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
     "render": "^0.1.4",
+    "socket.io": "^4.0.1",
     "webpack": "^5.28.0"
   },
   "devDependencies": {

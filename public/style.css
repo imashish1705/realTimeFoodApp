@@ -47,3 +47,9 @@ section.cart{
 .amount{
     color:red;
 }
+a.link{
+    background-color: red;
+}
+section.status{
+  background-color: aqua;
+}

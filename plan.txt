@@ -42,3 +42,6 @@ use connect -mongo for session store
 mongoose express-seesion, connect-mongo, dotenv
 -axios to send ajax request
 - install notification library npm i noty 
+ -------
+ in customer order section 
+ we use line awsome cdn from lone awsome site
