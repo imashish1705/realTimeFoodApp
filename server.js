@@ -17,7 +17,8 @@ const PORT = process.env.PORT || 3300;
 
 
 // database connection
-mongoose.connect('mongodb://localhost:27017/pizza', { useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true, useFindAndModify:true});
+const url = 'mongodb://localhost:27017/pizza'
+mongoose.connect(process.env.MONGO_CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true,useCreateIndex: true, useFindAndModify:true});
 const connection = mongoose.connection;
 connection.once("open",() => {
     console.log("Connected to Pizza DB");
@@ -83,6 +84,10 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname,"/views"));
 
 require("./routes/web")(app) // koi bhi object agr hum pass krte hai function k andr toh humhe mil jata hai by refrence in javaScript
+
+app.use((req,res) => {
+    res.status(404).render("errors/404")
+})
 
 const server = app.listen(PORT, () => {
     console.log(`server running at ${PORT}`);
